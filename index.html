@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Princess 🎀</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff0f5;
+            color: #9d5275;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px 20px;
+            background:
+                radial-gradient(circle at 10% 20%, #fff 0 3px, transparent 4px),
+                linear-gradient(135deg, #ffe0eb, #fff5f8, #ffd6e5);
+        }
+
+        .bow {
+            font-size: 65px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-12px) rotate(5deg);
+            }
+        }
+
+        .small {
+            letter-spacing: 5px;
+            font-size: 11px;
+            margin-top: 15px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 8vw, 75px);
+            color: #d65b91;
+            margin: 15px 0;
+        }
+
+        .name {
+            color: #a84777;
+            font-style: italic;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #a76c86;
+            max-width: 350px;
+            line-height: 2;
+        }
+
+        .btn {
+            border: none;
+            background: #e77ca8;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            margin-top: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            box-shadow: 0 8px 20px #e77ca855;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            background: #cf6090;
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #d65b91;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            max-width: 650px;
+            margin: 30px auto;
+            background: #fff;
+            border: 1px solid #f9c8dc;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 10px 35px #d65b9115;
+            line-height: 2;
+        }
+
+        .cake {
+            font-size: 90px;
+            margin: 25px;
+            animation: float 3s infinite;
+        }
+
+        .gallery {
+            display: flex;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 950px;
+            margin: 20px auto;
+        }
+
+        .photo {
+            height: 320px;
+            /* កម្ពស់ថ្មីដែលធំជាងមុន */
+            border-radius: 20px;
+            background: #ffd6e5;
+            display: grid;
+            place-items: center;
+            font-size: 55px;
+            overflow: hidden;
+        }
+
+        .photo img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+        }
+
+        /* Telegram Contact Box Style */
+        .contact-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 25px;
+            max-width: 450px;
+            margin: 30px auto;
+            box-shadow: 0 10px 35px #d65b9115;
+            border: 1px solid #f9c8dc;
+            text-align: left;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border: 2px solid #ffd6e5;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            background: #fff9fb;
+            color: #9d5275;
+        }
+
+        .contact-box input:focus,
+        .contact-box textarea:focus {
+            border-color: #d65b91;
+        }
+
+        .contact-box label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #b06285;
+        }
+
+        #statusMsg {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: #ffe0eb;
+            font-size: 13px;
+        }
+
+        .heart {
+            position: fixed;
+            pointer-events: none;
+            animation: rise 3s linear forwards;
+            z-index: 10;
+        }
+
+        @keyframes rise {
+            to {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media(max-width:600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .photo {
+                height: 160px;
+            }
+
+            .card {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="bow">🎀</div>
+
+        <p class="small">MY SPECIAL DAY </p>
+
+        <h1>Happy Birthday<br>
+            <span class="name">To LySa</span>
+        </h1>
+
+        <p class="description">
+            Today is all about Me💗
+        </p>
+
+
+    </section>
+
+    <section class="section">
+        <h2>Make a Wish ✨</h2>
+
+        <div class="cake">🎂</div>
+
+        <p></p>
+
+        <button class="btn" onclick="blowCandles()">
+            Blow the Candles 🕯️
+        </button>
+    </section>
+
+    <section class="section" style="background:#fff8fb">
+        <h2>A Little Birthday Letter 💌</h2>
+
+        <div class="card">
+            To all my dear friends and family,
+
+            <br><br>
+
+            Another year, another chapter of life. I'm still learning, growing, and figuring things out as I move
+            forward. There are many things I want to achieve, and I hope this year brings me closer to my goals.
+
+            To my family, I hope I can continue making you proud and become someone who can support and take care of you
+            in the future.
+
+            To my friends, thank you for being part of my journey, sharing memories, and making life more enjoyable. I
+            hope we continue to grow and create more beautiful memories together.
+
+            <br><br>
+
+            🎀💕
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Beautiful Memories 📸</h2>
+        <p>A little collection of my lovely moments.</p>
+
+        <section class="gallery">
+
+            <div class="gallery">
+                <div class="photo"><img src="1.jpg" alt="Memory 1"></div>
+
+
+                <!-- <div class="photo"><img src="4.jpg" alt="Memory 4"></div> -->
+                <!-- <div class="photo"><img src="5.jpg" alt="Memory 5"></div> -->
+                <div class="photo"><img src="6.jpg" alt="Memory 6"></div>
+                <div class="photo"><img src="7.jpg" alt="Memory 7"></div>
+            </div>
+        </section>
+        <!-- ផ្នែកសម្រាប់ស្កេន QR Code ទទួលកាដូ -->
+        <section class="section" style="background:#fff">
+            <h2>Send a Gift 🎁</h2>
+            <p>Your love and presence are the best gifts, but if you'd like to send a little treat ✨</p>
+
+            <div class="card" style="max-width: 380px; text-align: center;">
+                <h3 style="font-family: 'Playfair Display', serif; color: #d65b91; margin-bottom: 15px;">ABA KHQR 🌷
+                </h3>
+
+                <!-- កន្លែងដាក់រូបភាព QR Code របស់អ្នក -->
+                <div
+                    style="background: #fff0f5; padding: 15px; border-radius: 20px; border: 2px dashed #f9c8dc; display: inline-block;">
+                    <img src="8.png" alt="Gift QR Code"
+                        style="width: 220px; height: 220px; object-fit: contain; border-radius: 10px; display: block;">
+                </div>
+
+                <p style="font-size: 13px; color: #a76c86; margin-top: 15px;">
+                    <a href="https://acledabank.com.kh/acleda?payment_data=QTdP8baS&key=khqr" target="_blank">Click to
+                        send a
+                        sweet gift 💖</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ផ្នែកប្រអប់ផ្ញើសារជូនពរចូល Telegram -->
+        <section class="section" style="background:#fff8fb">
+            <h2>Send a Birthday Wish 💬</h2>
+            <p>Leave a sweet message for the birthday princess!</p>
+
+            <div class="contact-box">
+                <form id="telegramForm">
+                    <label>Your Name 🌸</label>
+                    <input type="text" id="senderName" placeholder="Enter your name..." required>
+
+                    <label>Your Wish 💌</label>
+                    <textarea id="senderMessage" placeholder="Write your sweet wish here..." rows="4"
+                        required></textarea>
+
+                    <button type="button" class="btn" style="width: 100%; margin-top: 5px;"
+                        onclick="sendToTelegram()">Send
+                        to Telegram 🚀</button>
+                </form>
+                <p id="statusMsg"></p>
+            </div>
+        </section>
+
+
+
+
+        <script>
+            function celebrate() {
+
+
+                for (let i = 0; i < 60; i++) {
+                    setTimeout(createHeart, i * 80);
+                }
+            }
+
+            function createHeart() {
+                const heart = document.createElement("div");
+                heart.className = "heart";
+                heart.innerHTML = ["💗", "💕", "🎀", "✨", "🌸"][
+                    Math.floor(Math.random() * 5)
+                ];
+
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.bottom = "0";
+                heart.style.fontSize = "25px";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => heart.remove(), 3000);
+            }
+
+            function blowCandles() {
+                document.querySelector(".cake").innerHTML = "🍰";
+                celebrate();
+            }
+
+            // មុខងារផ្ញើសារចូល Telegram
+            function sendToTelegram() {
+                const name = document.getElementById('senderName').value;
+                const message = document.getElementById('senderMessage').value;
+                const statusMsg = document.getElementById('statusMsg');
+
+                if (!name || !message) {
+                    statusMsg.style.color = '#d65b91';
+                    statusMsg.textContent = '❌ Please fill in all fields!';
+                    return;
+                }
+
+                // Bot Token និង Chat ID របស់អ្នក
+                const TELEGRAM_BOT_TOKEN = '9065795988:AAHBX9F47gW9xpmQ-m9TX30Vm9fHQ--EOPI';
+                const TELEGRAM_CHAT_ID = '8479899750'; //[cite: 2, 6]     // លេខ Chat ID របស់អ្នក
+
+                const text = `🎉 មានសារជូនពរថ្ងៃកំណើតថ្មី! 🎉\n\n👤 ពី: ${name}\n💬 សារ: ${message}`;
+
+                statusMsg.style.color = '#a76c86';
+                statusMsg.textContent = 'Sending... ⏳';
+
+                fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: text
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.ok) {
+                            statusMsg.style.color = '#5cb85c';
+                            statusMsg.textContent = '💖 Your wish has been sent successfully!';
+                            document.getElementById('telegramForm').reset();
+
+                            // បន្ថែម Effect បេះដូងពេលផ្ញើសារสำเร็จ
+                            for (let i = 0; i < 60; i++) {
+                                setTimeout(createHeart, i * 80);
+                            }
+                        } else {
+                            statusMsg.style.color = '#d9534f';
+                            statusMsg.textContent = '❌ Failed to send. Please check your Chat ID!';
+                        }
+                    })
+                    .catch(error => {
+                        statusMsg.style.color = '#d9534f';
+                        statusMsg.textContent = '❌ Network error! Please try again.';
+                        console.error('Error:', error);
+                    });
+            }
+        </script>
+
+</body>
+
+</html>
